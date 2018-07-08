@@ -72,10 +72,10 @@ class MainActivity : AppCompatActivity() {
     inner class SectionsPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
         override fun getItem(position: Int): Fragment {
-            when(position) {
-                0 -> return ReadFragment.newInstance()
-                1 -> return CreateFragment.newInstance(2)
-                else -> return Fragment()
+            return when(position) {
+                0 -> ReadFragment.newInstance()
+                1 -> CreateFragment.newInstance()
+                else -> Fragment()
             }
         }
 

@@ -8,7 +8,6 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
-import retrofit2.http.Url
 
 interface GoQRApiService {
 
@@ -17,7 +16,7 @@ interface GoQRApiService {
 
 
     @GET("create-qr-code")
-    fun create(@Url @Query("data") data: String): Observable<ResponseBody>
+    fun create(@Query("data") data: String, @Query("size") size: String): Observable<ResponseBody>
 
 
     companion object Factory {
@@ -25,7 +24,7 @@ interface GoQRApiService {
             val retrofit = Retrofit.Builder()
                     .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create())
-                    .baseUrl("http://api.qrserver.com/v1/")
+                    .baseUrl("https://api.qrserver.com/v1/")
                     .build()
 
             return retrofit.create(GoQRApiService::class.java)
