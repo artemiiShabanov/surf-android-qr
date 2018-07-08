@@ -2,11 +2,13 @@ package com.example.artemiishabanov.serfqr.Network
 
 import android.media.Image
 import io.reactivex.Observable
+import okhttp3.ResponseBody
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
+import retrofit2.http.Url
 
 interface GoQRApiService {
 
@@ -15,7 +17,7 @@ interface GoQRApiService {
 
 
     @GET("create-qr-code")
-    fun create(@Query("data") data: String): Observable<Image>//вообще хз что тут за тип у картинки
+    fun create(@Url @Query("data") data: String): Observable<ResponseBody>
 
 
     companion object Factory {

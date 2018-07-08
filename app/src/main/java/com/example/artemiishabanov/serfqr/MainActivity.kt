@@ -17,7 +17,6 @@ import com.example.artemiishabanov.serfqr.Fragments.CreateFragment
 import com.example.artemiishabanov.serfqr.Fragments.ReadFragment
 
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_main.view.*
 
 class MainActivity : AppCompatActivity() {
 
