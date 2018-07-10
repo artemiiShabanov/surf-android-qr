@@ -1,20 +1,15 @@
 package com.example.artemiishabanov.serfqr
 
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
-import android.support.v4.view.ViewPager
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
-import com.example.artemiishabanov.serfqr.Fragments.CreateFragment
-import com.example.artemiishabanov.serfqr.Fragments.ReadFragment
+import com.example.artemiishabanov.serfqr.fragments.CreateFragment
+import com.example.artemiishabanov.serfqr.fragments.ReadFragment
 
 import kotlinx.android.synthetic.main.activity_main.*
 

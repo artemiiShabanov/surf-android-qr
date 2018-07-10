@@ -1,12 +1,12 @@
-package com.example.artemiishabanov.serfqr.Fragments
+package com.example.artemiishabanov.serfqr.fragments
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.artemiishabanov.serfqr.Image.responseBodyToImage
-import com.example.artemiishabanov.serfqr.Network.GoQRRepo
+import com.example.artemiishabanov.serfqr.image.responseBodyToImage
+import com.example.artemiishabanov.serfqr.network.GoQRRepo
 import com.example.artemiishabanov.serfqr.R
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -23,7 +23,7 @@ class CreateFragment: Fragment() {
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribeOn(Schedulers.io())
                     .subscribe ({
-                        result -> rootView.imageView.setImageBitmap(responseBodyToImage(result))
+                        result -> rootView.imageView.setImageBitmap(result)
                     }, { error ->
                         error.printStackTrace()
                     })

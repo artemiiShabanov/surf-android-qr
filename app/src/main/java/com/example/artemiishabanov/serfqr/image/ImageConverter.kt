@@ -1,4 +1,4 @@
-package com.example.artemiishabanov.serfqr.Image
+package com.example.artemiishabanov.serfqr.image
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
